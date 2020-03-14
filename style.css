@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body {
+    font-family: 'Sen', sans-serif;
+}
+
+
+/*=================== BackGround Animation ==============*/
+
+body {
+    color: #FFF;
+    background-color: #FD940A;
+    background-image: radial-gradient(circle, #F9A72B 0%, #FA9026 70%, #FB6C1F 100%);
+}
+
+
+/* ================== header ========================*/
+
+header {
+    text-align: center;
+    border-bottom: 1.5px solid rgba(95, 95, 95, 0.253);
+    padding: 32px;
+    background-color: rgba(255, 255, 255, 0.541);
+}
+
+
+/* =================== Texte Menu ===================*/
+
+.links {
+    font-size: 22px;
+}
+
+.links a+a {
+    margin-left: 32px;
+}
+
+.links a {
+    font-weight: bold;
+    color: rgb(18, 165, 175);
+    text-decoration: none;
+    position: relative;
+}
+
+.links a.active {
+    color: rgb(18, 165, 175);
+}
+
+.links a:hover {
+    color: rgb(18, 165, 175);
+}
+
+.links a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: rgb(18, 165, 175);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.links a:hover::after {
+    width: 100%;
+    transition: width 700ms ease-in-out 25ms;
+}
+
+
+/* ==================== Quadrado ==================== */
+
+.card {
+    width: 700px;
+    min-height: 400px;
+    background-color: white;
+    margin: 100px auto;
+    /* faz o alinhamento ao meio */
+    /* divisao ao meio */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* sombra */
+    box-shadow: 25px 25px 25px 2px black;
+    /* animacao*/
+    animation: up 700ms ease-out;
+}
+
+@keyframes up {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.card .avatar {
+    /*Photo by Marius Ciocirlan on Unsplash*/
+    background-image: url(marius-ciocirlan-vMV6r4VRhJ8-unsplash.jpg);
+    background-size: cover;
+    border-radius: 100px 250px;
+}
+
+.details {
+    margin-top: 25px;
+    padding: 25px;
+}
+
+.details .item {
+    padding: 5px;
+    border-bottom: 0.9px solid rgb(214, 214, 214);
+}
+
+.details .item:last-child {
+    border: none;
+}
+
+.details h3,
+.details .item div:nth-child(1) {
+    color: rgb(49, 49, 49);
+    font-size: 17px;
+    line-height: 24px;
+    /* para separar o texto */
+    letter-spacing: 0.7px;
+    font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+    color: rgb(22, 22, 22);
+    font-size: 13px;
+}
+
+.details .item span {
+    padding: 8px 16px;
+    background-color: rgb(18, 165, 175);
+    border-radius: 16px;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+
+/* ========================= Form ============================ */
+
+input {
+    width: 100%;
+    outline: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+input[ type="radio"] {
+    width: initial;
+    margin-right: 4px;
+}
+
+input::placeholder {
+    font-size: 10px;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    padding: 8px 35px;
+    background-color: rgb(18, 165, 175);
+    border-radius: 16px;
+    margin-top: 15px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+
+/* ========================== Footer ===============================*/
+
+footer {
+    position: relative;
+}
