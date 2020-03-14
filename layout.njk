@@ -1,0 +1,28 @@
+<html>
+    <div id="fundo">
+    
+        <head>
+            
+            {% block head %}
+            <title> School Manager</title>
+            {%endblock%}
+            <link rel="stylesheet" href="/style.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
+        
+        <body>
+            <header>
+
+                <div class="links">
+                    <a href="/Teachers" class="active">Teachers</a>
+                    <a href="/Students">Students</a>
+                </div>
+            </header>  
+
+            <!-- BackGround -->
+        
+
+            
+            {% block content%} {% endblock%}
+        </body>
+</html>

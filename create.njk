@@ -1,0 +1,76 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<head>
+<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+      <div class="conteiner">
+         <form class="card" method="POST" action="/teachers">
+          <section class="avatar" ></section>
+               <section class="details">
+
+                  <h3>  New Teacher</h3>
+
+
+
+                   <div class="item">
+                     <div>Full Name</div>
+                     <div>
+                        <input 
+                        type="Text" 
+                        name="FullName"
+                        placehoder="Full Name"  
+                        >
+                     </div>
+                  </div>
+
+                  <div class="item">
+                     <div>Birthday Date</div>
+                     <div>
+                        <input 
+                            type="date" 
+                            name="Birth" 
+                        >
+                    </div>
+                  </div>
+
+
+                  <div class="item">
+                     <div>
+                     Type of class</div>
+                     <div>
+                        <span><input type="Radio" name="clas"  value="Face-to-face">Face-to-face</span>
+                        <span><input type="Radio" name="clas " value="From a distance">From a distance </span>
+                  </div>
+
+
+                  <div class="item">
+                     <div>Level of schooling</div>
+                     <div>
+                        <select name="select">
+                           <option value="high school">high school</option> 
+                           <option value="college education">college education</option> 
+                           <option value="Master">Master</option> 
+                           <option value="Doctorate">Doctorate</option>
+                        </select>
+                        
+                    </div>
+                  </div>
+
+                  <div class="item">
+                     <div>Follow-up</div>
+                     <div>
+                           <input type="text" name="services" placehoder="Service">
+                     </div>
+                  </div>    
+
+                    <button type="submit"> Salvar</button>
+               </section>
+              
+         </form> 
+      </div>
+
+
+{% endblock content %}
+
